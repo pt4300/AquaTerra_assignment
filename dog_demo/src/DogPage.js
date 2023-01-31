@@ -3,15 +3,6 @@ import { React, useEffect, useState } from 'react';
 const DogPage = () => {
   const [pictureArray, setPictureArray] = useState([]);
 
-  const fetchData = async (input) => {
-    let fetchedPicture = [];
-    for (let i = 0; i < input; i++) {
-      getPictureURL().then((data) => {
-        setPictureArray((fetchedPicture) => [...fetchedPicture, data.url]);
-      });
-    }
-    console.log(pictureArray);
-  };
   const getPictureURL = async () => {
     return fetch('https://random.dog/woof.json').then((response) =>
       response
@@ -28,14 +19,25 @@ const DogPage = () => {
     );
   };
   useEffect(() => {
-    fetchData(8);
-  }, []);
+    if (pictureArray.length < 8) {
+      getPictureURL().then((data) => {
+        let valid = data.url.includes('.jpg') || data.url.includes('.png') || data.url.includes('.gif');
+        if (valid) {
+          setPictureArray((fetchedPicture) => [...fetchedPicture, data.url]);
+        }
+      });
+    }
+  }, [pictureArray]);
 
   return (
     <div>
       hello
       {pictureArray.map((picture) => (
-        <div>{picture}</div>
+        <div>
+          {console.log(pictureArray)}
+          {picture}
+          <img src={picture} alt={'/'} />
+        </div>
       ))}
     </div>
   );
