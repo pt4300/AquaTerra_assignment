@@ -1,12 +1,9 @@
 import logo from './logo.svg';
+import DogPage from './DogPage';
 import './App.css';
 
 function App() {
-  return (
-    <div>
-      <div>hello world</div>
-    </div>
-  );
+  return <DogPage />;
 }
 
 export default App;
