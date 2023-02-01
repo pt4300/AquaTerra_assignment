@@ -1,0 +1,109 @@
+html {
+    /* 10px */
+    font-size: 62.5%;
+  }
+  .title{
+    font-size: 3rem;
+    text-align: center;
+    margin: 5rem 0 5rem;
+  }
+  .gridContainer {
+    margin: 20rem 5rem 20rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+  }
+  
+  .gridItem {
+    width: 100%;
+    height: auto;
+  }
+  .buttonContainer{
+    margin: 5rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .fetchButton{
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    width: auto;
+    cursor: pointer;
+    width: 20rem;
+    height: auto;
+
+  }
+
+  .fetchButton:hover,.fetchButton:focus{
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+
+
+
+  
+  
+  /* CSS */
+  .button-6 {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .button-6:hover,
+  .button-6:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  
+  .button-6:hover {
+    transform: translateY(-1px);
+  }
+  
+  .button-6:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
