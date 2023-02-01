@@ -18,7 +18,7 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/pt4300/AquaTerra_assignment.git
    ```
 2. cd to source code folder
-	   ```sh
+3. ```sh
    cd dog_demo
    ```
 3. Install NPM packages
