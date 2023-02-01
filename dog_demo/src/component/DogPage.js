@@ -10,7 +10,6 @@ const DogPage = () => {
     //re-fetch images if the array does not contain 8 images
 
     if (index >= 8) {
-      console.log(pictureArray);
       return;
     }
     // initial the request
@@ -26,7 +25,6 @@ const DogPage = () => {
     ) {
       setIndex((prevIndex) => prevIndex + 1);
       setPictureArray((fetchedPicture) => [...fetchedPicture, data.url]);
-      console.log(index);
     } else {
       setIndex((prevIndex) => prevIndex);
     }
