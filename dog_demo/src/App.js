@@ -1,7 +1,4 @@
-import logo from './logo.svg';
-import DogPage from './DogPage';
-import './App.css';
-
+import DogPage from './component/DogPage';
 function App() {
   return <DogPage />;
 }

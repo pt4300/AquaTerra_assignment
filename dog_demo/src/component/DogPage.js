@@ -1,11 +1,14 @@
 import { React, useEffect, useState } from 'react';
-import './DogPage.css';
+import '../DogPage.css';
 
 const DogPage = () => {
   const [pictureArray, setPictureArray] = useState([]);
-  const [index, setIndex] = useState(0);
+  // index is used to control the fetch
+  const [index, setIndex] = useState(1);
+  // the code always fetch extra one image, so the fetchRound is used to control the fetch in first round
   async function fetchData() {
     //re-fetch images if the array does not contain 8 images
+
     if (index >= 8) {
       console.log(pictureArray);
       return;
@@ -23,6 +26,7 @@ const DogPage = () => {
     ) {
       setIndex((prevIndex) => prevIndex + 1);
       setPictureArray((fetchedPicture) => [...fetchedPicture, data.url]);
+      console.log(index);
     } else {
       setIndex((prevIndex) => prevIndex);
     }
@@ -41,9 +45,9 @@ const DogPage = () => {
     <div>
       <div className="title">Welcome to Dog collection</div>
       <div className="gridContainer">
-        {pictureArray.map((image) => (
+        {pictureArray.map((image, idx) => (
           <div>
-            <div className="gridItem" key={image}>
+            <div className="gridItem">
               {image.endsWith('.mp4') ? (
                 <video className="gridItem" src={image} controls />
               ) : (

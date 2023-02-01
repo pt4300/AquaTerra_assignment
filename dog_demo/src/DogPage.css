@@ -10,7 +10,7 @@ html {
   .gridContainer {
     margin: 20rem 5rem 20rem;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     justify-content: center;
   }
@@ -51,7 +51,7 @@ html {
   
   @media (max-width: 768px) {
     .gridContainer {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   
